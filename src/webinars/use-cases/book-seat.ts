@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 import { IIdGenerator } from 'src/core/ports/id-generator.interface';
+=======
+>>>>>>> 1df41f7645bf1eaeb654fe69295b98645c1d700f
 import { IMailer } from 'src/core/ports/mailer.interface';
 import { Executable } from 'src/shared/executable';
 import { User } from 'src/users/entities/user.entity';
 import { IUserRepository } from 'src/users/ports/user-repository.interface';
+<<<<<<< HEAD
 import { WebinarAlreadyParticipatingException } from 'src/webinars/exceptions/webinar-already-participating';
 import { WebinarNoSeatsAvailableException } from 'src/webinars/exceptions/webinar-no-seats-available';
 import { Participation } from 'src/webinars/entities/participation.entity';
+=======
+>>>>>>> 1df41f7645bf1eaeb654fe69295b98645c1d700f
 import { IParticipationRepository } from 'src/webinars/ports/participation-repository.interface';
 import { IWebinarRepository } from 'src/webinars/ports/webinar-repository.interface';
 
@@ -21,6 +27,7 @@ export class BookSeat implements Executable<Request, Response> {
     private readonly userRepository: IUserRepository,
     private readonly webinarRepository: IWebinarRepository,
     private readonly mailer: IMailer,
+<<<<<<< HEAD
     private readonly idGenerator: IIdGenerator,
   ) {}
   async execute({ webinarId, user }: Request): Promise<Response> {
@@ -63,5 +70,10 @@ export class BookSeat implements Executable<Request, Response> {
         body: `A new participant has registered for your webinar "${webinar.props.title}"`,
       });
     }
+=======
+  ) {}
+  async execute({ webinarId, user }: Request): Promise<Response> {
+    return;
+>>>>>>> 1df41f7645bf1eaeb654fe69295b98645c1d700f
   }
 }
